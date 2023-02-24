@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  background-color: inherit;
+}
+
+tbody {
+  height: 40vh;
+}
