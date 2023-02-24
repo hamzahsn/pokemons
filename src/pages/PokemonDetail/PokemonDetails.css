@@ -1,0 +1,12 @@
+.wrapper {
+  background-image: radial-gradient(
+    circle,
+    #051937,
+    #1d2d4d,
+    #324263,
+    #48587b,
+    #5f6f93
+  );
+  height: 100vh;
+  color: aliceblue;
+}
