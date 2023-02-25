@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { PokemonContext, TPokemon } from "../../context/pokemonContext";
@@ -22,19 +22,17 @@ export const PokemonList = ({
     const newFavorites = [...pokemons, pokemon];
     setPokemons(newFavorites);
   };
+
   return (
     <>
       <table className="w-9/12 text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="flex w-full text-xs text-gray-900 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr className="w-full">
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-10 py-3">
               Pokemon
             </th>
-            <th scope="col" className="px-6 py-3">
+            <th scope="col" className="px-20 py-3">
               Link
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Like me!
             </th>
           </tr>
         </thead>
@@ -48,16 +46,23 @@ export const PokemonList = ({
               <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 {pokemon.name}
               </td>
-              <td className="px-6 py-4">
+              <td className="px-10 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <Link to={`/pokemon/${pokemon.name}`}>{pokemon.url}</Link>
               </td>
-              <td className="px-6 py-4">
+              <td className="px-10 py-4 font-medium text-gray-900  dark:text-white">
                 <button
                   onClick={() => handleAddFavoritePokemon(pokemon)}
                   name="Like"
-                  className="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  title="Like"
+                  className="px-6 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
-                  Like
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path
+                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                      clipRule="evenodd"
+                      fillRule="evenodd"
+                    ></path>
+                  </svg>
                 </button>
               </td>
             </tr>
