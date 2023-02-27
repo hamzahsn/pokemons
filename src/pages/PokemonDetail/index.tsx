@@ -46,7 +46,6 @@ export const PokemonDetail = () => {
               // Server is slow but it provide a good quality images instead of already loaded sprites...
               src={`https://unpkg.com/pokeapi-sprites@2.0.2/sprites/pokemon/other/dream-world/${pokemon.id}.svg`}
               alt={name}
-              loading="lazy"
             />
           </div>
           <div className="flex flex-col items-start justify-left">

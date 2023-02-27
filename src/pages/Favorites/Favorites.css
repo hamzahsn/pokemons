@@ -1,12 +1,13 @@
 .wrapper {
-  background-image: radial-gradient(
-    circle,
-    #051937,
-    #1d2d4d,
-    #324263,
-    #48587b,
-    #5f6f93
+  background-image: linear-gradient(
+    to right top,
+    #9d3352,
+    #be4d3f,
+    #ca7524,
+    #c0a107,
+    #9ccd30
   );
-  height: 100vh;
+  min-height: 100vh;
   color: aliceblue;
+  overflow: scroll;
 }
