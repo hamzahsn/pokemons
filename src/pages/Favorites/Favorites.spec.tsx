@@ -5,7 +5,7 @@ import { Favorites } from "./";
 import { PokemonContext } from "../../context/pokemonContext";
 
 describe("Favorites component", () => {
-  test("renders My Favorite Pokemons heading", () => {
+  it("renders My Favorite Pokemons heading", () => {
     render(
       <PokemonContext.Provider value={{ pokemons: [], setPokemons: () => {} }}>
         <Favorites />
@@ -15,7 +15,7 @@ describe("Favorites component", () => {
     expect(screen.getByText("My Favorite Pokemons")).toBeInTheDocument();
   });
 
-  test("renders PokemonCards when there are pokemons in the context", () => {
+  it("renders PokemonCards when there are pokemons in the context", () => {
     const mockPokemons = [
       { name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/" },
       { name: "charmander", url: "https://pokeapi.co/api/v2/pokemon/4/" },
@@ -32,7 +32,7 @@ describe("Favorites component", () => {
     expect(screen.getByText("charmander")).toBeInTheDocument();
   });
 
-  test("does not render PokemonCards when there are no pokemons in the context", () => {
+  it("does not render PokemonCards when there are no pokemons in the context", () => {
     render(
       <PokemonContext.Provider value={{ pokemons: [], setPokemons: () => {} }}>
         <Favorites />
