@@ -4,8 +4,6 @@
 
 ![home](favoritepage.png)
 
-[ React ](/react/)
-
 ## [ React ](/react/)
 
 ---
