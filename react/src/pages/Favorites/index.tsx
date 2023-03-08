@@ -9,7 +9,6 @@ export const Favorites = () => {
 
   return (
     <div className="wrapper">
-      <h1 className="text-3xl font-bold text-left">My Favorite Pokemons</h1>
       <div className="grid lg:grid-cols-4 sm:grid-cols-1 sm:gap-6 md:grid-cols-2 md:gap-2">
         {pokemons &&
           pokemons.length > 0 &&

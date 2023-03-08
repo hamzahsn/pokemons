@@ -5,16 +5,6 @@ import { Favorites } from "./";
 import { PokemonContext } from "../../context/pokemonContext";
 
 describe("Favorites component", () => {
-  it("renders My Favorite Pokemons heading", () => {
-    render(
-      <PokemonContext.Provider value={{ pokemons: [], setPokemons: () => {} }}>
-        <Favorites />
-      </PokemonContext.Provider>
-    );
-
-    expect(screen.getByText("My Favorite Pokemons")).toBeInTheDocument();
-  });
-
   it("renders PokemonCards when there are pokemons in the context", () => {
     const mockPokemons = [
       { name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/" },
